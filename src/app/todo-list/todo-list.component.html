@@ -1,0 +1,12 @@
+<!-- <app-todo-items></app-todo-items> -->
+
+<div *ngIf="todos.length">
+	<ul>
+        <!-- <li *ngFor="let todo of todos">
+            <div *ngIf="todo.complete">{{todo.name}}</div>
+        </li> -->
+        
+        <li appCrossLine *ngFor="let todo of todos">{{todo.name}}</li>
+        
+	</ul>
+</div>
