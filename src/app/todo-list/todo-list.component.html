@@ -2,11 +2,14 @@
 
 <div *ngIf="todos.length">
 	<ul>
-        <!-- <li *ngFor="let todo of todos">
-            <div *ngIf="todo.complete">{{todo.name}}</div>
-        </li> -->
+        <div><input type="text" placeholder="add new todo"></div>
         
-        <li appCrossLine *ngFor="let todo of todos">{{todo.name}}</li>
+        <li *ngFor="let todo of todos" [style.display]="todo.complete?'none':'block'">
+              {{todo.name}}
+            <!-- <div *ngIf="!todo.complete">{{todo.name}}</div> -->
+        </li>
+        
+        <!-- <li appCrossLine *ngFor="let todo of todos">{{todo.name}}</li> -->
         
 	</ul>
 </div>
