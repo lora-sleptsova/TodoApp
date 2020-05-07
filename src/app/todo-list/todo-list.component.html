@@ -2,11 +2,12 @@
 
 <div *ngIf="todos.length">
 	<ul>
-        <!-- <li *ngFor="let todo of todos">
-            <div *ngIf="todo.complete">{{todo.name}}</div>
-        </li> -->
-        
-        <li appCrossLine *ngFor="let todo of todos" [style.display]="todo.complete?'none':'block'">{{todo.name}}</li>
-        
+        <div class="addTodo">
+            <input #newTodo type="text" placeholder="add new" (keyup)="keyUpHandler($event,newTodo.value)">
+            <button (click)="addTodo(newTodo.value)">Add</button>
+        </div>
+        <li *ngFor="let todo of todos">
+            <div>{{todo.name}}</div>
+        </li>
 	</ul>
 </div>

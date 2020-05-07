@@ -24,7 +24,18 @@ export class TodoListComponent {
   /**
    * addNewTodo
    */
-  public addNewTodo() {
-    
+  public addTodo(todoName : string) {
+    let newTodo = {
+      "name": todoName,
+      "complete": false
+    }
+    this.todos.push(newTodo);
+  }
+
+  public keyUpHandler(e, todoName : string) {
+    console.dir(e);
+    if (e.key === "Enter") {
+      this.addTodo(todoName);
+    }
   }
 }
