@@ -9,12 +9,22 @@ export class TodoListComponent {
   todos = [
     {
       "name": "todo1",
-      "complete": true
+      "complete": false
     },
     {
       "name": "todo2",
       "complete": true
+    },
+    {
+      "name": "todo3",
+      "complete": true
     }
-
   ]  
+
+  /**
+   * addNewTodo
+   */
+  public addNewTodo() {
+    
+  }
 }

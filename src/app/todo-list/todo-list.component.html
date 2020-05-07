@@ -6,7 +6,7 @@
             <div *ngIf="todo.complete">{{todo.name}}</div>
         </li> -->
         
-        <li appCrossLine *ngFor="let todo of todos">{{todo.name}}</li>
+        <li appCrossLine *ngFor="let todo of todos" [style.display]="todo.complete?'none':'block'">{{todo.name}}</li>
         
 	</ul>
 </div>

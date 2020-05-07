@@ -11,6 +11,8 @@ import { TodoItemsComponent } from './todo-list/todo-items/todo-items.component'
 import { TotalItemsComponent } from './total-items/total-items.component';
 import { TestCompComponent } from './test-comp/test-comp.component';
 import { CrossLineDirective } from './directives/cross-line.directive';
+import { FancyQuotesPipe } from './pipes/fancy-quotes.pipe';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CrossLineDirective } from './directives/cross-line.directive';
     TodoItemsComponent,
     TotalItemsComponent,
     TestCompComponent,
-    CrossLineDirective
+    CrossLineDirective,
+    FancyQuotesPipe,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,
