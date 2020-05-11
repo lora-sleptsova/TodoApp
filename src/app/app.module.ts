@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { TodoItemsComponent } from './todo-list/todo-items/todo-items.component'
 import { TotalItemsComponent } from './total-items/total-items.component';
 import { TestCompComponent } from './test-comp/test-comp.component';
 import { CrossLineDirective } from './directives/cross-line.directive';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { FancyQuotePipe } from './pipe/fancy-quote.pipe';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { CrossLineDirective } from './directives/cross-line.directive';
     TodoItemsComponent,
     TotalItemsComponent,
     TestCompComponent,
-    CrossLineDirective
+    CrossLineDirective,
+    DataBindingComponent,
+    FancyQuotePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

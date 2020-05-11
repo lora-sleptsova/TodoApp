@@ -6,5 +6,5 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-header.component.css']
 })
 export class TodoHeaderComponent {
-title=`Todo App`;
+  title=`Todo App`;
 }
