@@ -1,4 +1,9 @@
-<p>test-comp works!</p>
-<div *ngIf="loggedIn; then thenBlock else elseBlock">Welcome</div>
-<ng-template #thenBlock>Welcome</ng-template>
-<ng-template #elseBlock>not Welcome</ng-template>
+<div>
+    user name: <input #uName type = "text" [value] = "userName" (keyup.enter)="userName=uName.value">
+    <div class = "output">{{userName}}</div>
+</div>>
+
+<div>
+    user name: <input #uName2 type = "text" [(ngModel)]="userName">
+    <div class = "output">{{userName}}</div>
+</div>>

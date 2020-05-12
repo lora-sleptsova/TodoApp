@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TestCompComponent {
 
- loggedIn = false;
+  userName = "User name";
+  loggedIn = false;
 
 }

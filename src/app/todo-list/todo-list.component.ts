@@ -21,10 +21,7 @@ export class TodoListComponent {
     }
   ]  
 
-  /**
-   * addNewTodo
-   */
-  public addTodo(todoName : string) {
+  public addNewTodo(todoName : string) {
     let newTodo = {
       "name": todoName,
       "complete": false
@@ -32,10 +29,11 @@ export class TodoListComponent {
     this.todos.push(newTodo);
   }
 
-  public keyUpHandler(e, todoName : string) {
-    console.dir(e);
-    if (e.key === "Enter") {
-      this.addTodo(todoName);
-    }
+  public toggleComplete(id) {
+    this.todos[id].complete = ! this.todos[id].complete;
+  }
+
+  public removeTodo() {
+    
   }
 }
