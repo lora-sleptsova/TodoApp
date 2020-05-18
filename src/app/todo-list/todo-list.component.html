@@ -1,6 +1,6 @@
 <!-- <app-todo-items></app-todo-items> -->
 
-<div *ngIf="todos.length">
+<div *ngIf="todos.length; else noTodos">
 	<ul>
         <!-- <li *ngFor="let todo of todos">
             <div *ngIf="todo.complete">{{todo.name}}</div>
@@ -13,11 +13,22 @@
             <button (click)="addTodo(newTodo.value)">Add</button>
         </div>
 
-        <li *ngFor="let todo of todos" [class.completed] = "todo.complete"
-            (click)="toggleComplete(todos.indexOf(todo))">
-            {{todo.name}}
-            <span class="btnDel" (click)="removeTodo(todos.indexOf(todo))">X</span>
+        <li *ngFor="let todo of todos; index as i"
+            [class.completed] = "todo.complete">
+            
+            <!-- <span (click)="toggleComplete(todos.indexOf(todo))">{{todo.name}}</span> -->
+            <!-- <span class="btnDel" (click)="removeTodo(todos.indexOf(todo))">X</span> -->
+
+            <!-- <span (click)="toggleComplete(i)">{{todo.name}}</span> -->
+            <!-- <span class="btnDel" (click)="removeTodo(i)">X</span> -->
+
+            <app-todo-items [TodoParentName]="todo.name" [TodoIndex]="i"
+                            (TodoDelEmit)="removeTodo($event)"></app-todo-items>
+
         </li>
         
 	</ul>
 </div>
+<ng-template #noTodos>
+    <p>No Todos</p>
+</ng-template>

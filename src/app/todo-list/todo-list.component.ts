@@ -26,13 +26,11 @@ export class TodoListComponent {
   ]  
 
   toggleComplete(id){
-    // console.log("comp",this.todos);
     this.todos[id].complete = !this.todos[id].complete;
-    
   }
 
   addTodo(todoName) {
-    let lastID = this.todos.length;
+    // let lastID = this.todos.length;
 
     let newTodo = {
       // "id": lastID+1,
@@ -43,12 +41,7 @@ export class TodoListComponent {
   }
 
   removeTodo(id){
-    // delete this.todos[id];
-    // this.todos.pop();
-    // console.log("del",id,this.todos);
-    // console.dir(id);
-    this.todos.splice(id, 1);
-  
+    this.todos.splice(id,1);
   }
 
 }
