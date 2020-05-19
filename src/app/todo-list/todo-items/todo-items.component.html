@@ -1,4 +1,6 @@
 <div>
     <span>Parent Name: {{TodoParentName}}</span>
-    <span class="btnDel" (click)="this.TodoDelEmit.emit(TodoIndex)">X</span>
+    <span class="btnDel" (click)="removeTodo(TodoIndex)">
+        <i class="fas fa-trash"></i>
+    </span>
 </div>

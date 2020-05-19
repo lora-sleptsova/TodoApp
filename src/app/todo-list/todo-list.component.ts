@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoServicesService } from '../todo-services.service';
+
 
 @Component({
   selector: 'app-todo-list',
@@ -6,42 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent {
-  todos = [
-    {
-      // "id": 1,
-      "name": "todo1",
-      "complete": false
-    },
-    {
-      // "id": 2,
-      "name": "todo2",
-      "complete": true
-    },
-    {
-      // "id": 3,
-      "name": "todo3",
-      "complete": false
-    }
+  todos = [];
 
-  ]  
+  constructor(private _TodoServices:TodoServicesService){
+    this.todos = this._TodoServices.getTodos();
+  }
 
   toggleComplete(id){
     this.todos[id].complete = !this.todos[id].complete;
-  }
-
-  addTodo(todoName) {
-    // let lastID = this.todos.length;
-
-    let newTodo = {
-      // "id": lastID+1,
-      "name": todoName,
-      "complete": false
-    }
-    this.todos.push(newTodo);
-  }
-
-  removeTodo(id){
-    this.todos.splice(id,1);
   }
 
 }

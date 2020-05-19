@@ -1,5 +1,6 @@
-<div>
-    <input type="text" placeholder="Add new todo">
-    <app-button></app-button>
-    <!-- <div class="btnAdd" tabindex="2">Add</div> -->
+<div class="addTodo">
+	<input #newTodo type="text"placeholder="add new todo">
+		<!-- (keyup.enter)='addNewTodo(newTodo.value)'> -->
+
+	<button (click)="this.addTodo.emit(newTodo.value)">Add</button>
 </div>

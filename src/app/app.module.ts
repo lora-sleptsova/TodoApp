@@ -27,7 +27,7 @@ import { FancyQuotePipe } from './pipe/fancy-quote.pipe';
     TestCompComponent,
     CrossLineDirective,
     DataBindingComponent,
-    FancyQuotePipe
+    FancyQuotePipe,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
-<!-- <app-todo-items></app-todo-items> -->
+<!-- <app-add-todo (addTodo)="addTodo($event)"></app-add-todo> -->
+<app-add-todo></app-add-todo>
 
 <div *ngIf="todos.length; else noTodos">
 	<ul>
@@ -8,10 +9,10 @@
         
         <!-- <li appCrossLine *ngFor="let todo of todos">{{todo.name}}</li> -->
 
-        <div class="addTodo">
+        <!-- <div class="addTodo">
             <input #newTodo type="text" placeholder="add new" (keyup.enter)="addTodo(newTodo.value)">
             <button (click)="addTodo(newTodo.value)">Add</button>
-        </div>
+        </div> -->
 
         <li *ngFor="let todo of todos; index as i"
             [class.completed] = "todo.complete">
@@ -22,8 +23,7 @@
             <!-- <span (click)="toggleComplete(i)">{{todo.name}}</span> -->
             <!-- <span class="btnDel" (click)="removeTodo(i)">X</span> -->
 
-            <app-todo-items [TodoParentName]="todo.name" [TodoIndex]="i"
-                            (TodoDelEmit)="removeTodo($event)"></app-todo-items>
+            <app-todo-items [TodoParentName]="todo.name" [TodoIndex]="i"></app-todo-items>
 
         </li>
         
