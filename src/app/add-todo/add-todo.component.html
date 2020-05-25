@@ -1,6 +1,10 @@
-<div class="addTodo">
-	<input #newTodo type="text"placeholder="add new todo">
-		<!-- (keyup.enter)='addNewTodo(newTodo.value)'> -->
 
-	<button (click)="this.addTodo.emit(newTodo.value)">Add</button>
+<div class="addTodo">
+	<input #newTodo type="text" placeholder="add new todo">
+	<!-- <app-button></app-button> -->
+	
+	<!-- (keyup.enter)='addNewTodo(newTodo.value)'> -->
+
+	<!-- <button (click)="this.addTodo.emit(newTodo.value)">Add</button> -->
+	<button class="btnAdd" (click)="addTodo(newTodo.value)">Add</button>
 </div>

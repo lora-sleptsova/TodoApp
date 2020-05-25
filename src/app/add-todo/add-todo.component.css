@@ -16,9 +16,29 @@ input:focus{
     border: 1px solid red;
 }
 
-/* .btnAdd:focus{
+.btnAdd{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: -3em;
+    border-radius: 100%;
+    background: #999;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.btnAdd:focus{
     box-shadow: 2px 2px 5px 4px #7FDDC4;
 }
 .btnAdd:hover{
     box-shadow: 2px 2px 5px 4px #7FDDC4;
-} */
+}

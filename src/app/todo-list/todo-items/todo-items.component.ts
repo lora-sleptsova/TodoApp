@@ -10,6 +10,8 @@ export class TodoItemsComponent {
 
   @Input() TodoParentName;
   @Input() TodoIndex;
+
+  // @Output() TodoDelEmit = new EventEmitter();
   
   index: number;
 
@@ -18,7 +20,5 @@ export class TodoItemsComponent {
   removeTodo(index){
     this._todoServe.removeTodo(index);
   }
-
-  // @Output() TodoDelEmit = new EventEmitter();
 
 }
