@@ -27,6 +27,14 @@ li:nth-child(2n){
 .fa-trash{
     color: red;
 }
+.fa-pencil-alt{
+    color: yellow;
+}
+
+.btnEdit{
+    position: absolute;
+    bottom: 0; right: 50px;
+}
 
 .btnDel{
     position: absolute;

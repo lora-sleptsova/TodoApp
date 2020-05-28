@@ -6,17 +6,17 @@ import { Injectable } from '@angular/core';
 export class TodoServicesService {
   todos = [
     {
-      // "id": 1,
+       "id": 1,
       "name": "todo1",
       "complete": false
     },
     {
-      // "id": 2,
+       "id": 2,
       "name": "todo2",
       "complete": true
     },
     {
-      // "id": 3,
+      "id": 3,
       "name": "todo3",
       "complete": false
     }
@@ -34,10 +34,10 @@ export class TodoServicesService {
   }
 
   addTodo(todoName) {
-    // let lastID = this.todos.length;
+    let lastID = this.todos.length;
 
     let newTodo = {
-      // "id": lastID+1,
+       "id": lastID+1,
       "name": todoName,
       "complete": false
     }
