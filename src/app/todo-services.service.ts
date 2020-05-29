@@ -43,5 +43,9 @@ export class TodoServicesService {
     }
     this.todos.push(newTodo);
   }
+
+  toggleComplete(id){
+    this.todos[id].complete = !this.todos[id].complete;
+  }
     
 }

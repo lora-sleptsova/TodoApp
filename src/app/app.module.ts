@@ -15,6 +15,7 @@ import { CrossLineDirective } from './directives/cross-line.directive';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FancyQuotePipe } from './pipe/fancy-quote.pipe';
 import { TodoDetailsComponent } from './todo-details/todo-details.component';
+import { TodosComponent } from './todos/todos.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { TodoDetailsComponent } from './todo-details/todo-details.component';
     DataBindingComponent,
     FancyQuotePipe,
     TodoDetailsComponent,
+    TodosComponent,
   ],
   imports: [
     BrowserModule,

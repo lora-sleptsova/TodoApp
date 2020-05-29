@@ -14,8 +14,4 @@ export class TodoListComponent {
     this.todos = this._TodoServices.getTodos();
   }
 
-  toggleComplete(id){
-    this.todos[id].complete = !this.todos[id].complete;
-  }
-
 }

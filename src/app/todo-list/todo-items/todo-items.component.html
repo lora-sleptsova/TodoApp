@@ -1,7 +1,10 @@
 <div>
-    <span>{{TodoParentName}}</span>
+    <span (click)="toggleComplete(TodoIndex)">{{TodoParentName}}</span>
     <span class="btnEdit">
-        <a routerLink="/todo/{{TodoIndex}}"><i class="fas fa-pencil-alt"></i></a>   
+        <!-- <a routerLink="/todo/{{TodoIndex}}"><i class="fas fa-pencil-alt"></i></a>    -->
+        <a [routerLink]="['/todo/',todo.id]"
+           routerLinkActive="activeLink">
+        <i class="fas fa-pencil-alt"></i></a>   
     </span>
     <span class="btnDel" (click)="removeTodo(TodoIndex)">
         <i class="fas fa-trash"></i>    
