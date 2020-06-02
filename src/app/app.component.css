@@ -1,6 +1,8 @@
 div{
-    border: .3em solid #DDD;
+    /* border: .3em solid #DDD;
     width: 80%;
-    margin: 3em auto;
-    background: #FFF;
+    margin: 3em auto;*/
+    height: 100vh;
+    background: lightgrey;
+    padding-top: 3em;
 }

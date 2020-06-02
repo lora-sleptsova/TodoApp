@@ -26,7 +26,7 @@ li:nth-child(2n){
 
 .completed{
     text-decoration: line-through;
-    color: #CCC;
+    color: #999;
 }
 
 .btnDel{

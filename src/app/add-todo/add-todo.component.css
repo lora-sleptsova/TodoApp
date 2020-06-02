@@ -8,12 +8,12 @@ div{
 input{
     width: 98%;
     height: 3em;
-    outline: aquamarine;
+    outline: aqua;
     /* border: 1px solid red; */
 }
 
 input:focus{
-    border: 1px solid red;
+    border: 1px solid aqua;
 }
 
 .btnAdd{
@@ -21,15 +21,15 @@ input:focus{
     position: absolute;
     top: 0;
     right: 0;
-    width: 2em;
-    height: 2em;
-    line-height: 2em;
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
     vertical-align: middle;
     text-align: center;
     font-size: 1.5em;
     margin-left: -3em;
     border-radius: 100%;
-    background: #999;
+    background: aqua;
     border: none;
     outline: none;
     cursor: pointer;
@@ -37,8 +37,8 @@ input:focus{
 }
 
 .btnAdd:focus{
-    box-shadow: 2px 2px 5px 4px #7FDDC4;
+    box-shadow: 2px 2px 5px 4px aqua;
 }
 .btnAdd:hover{
-    box-shadow: 2px 2px 5px 4px #7FDDC4;
+    box-shadow: 2px 2px 5px 4px aqua;
 }
