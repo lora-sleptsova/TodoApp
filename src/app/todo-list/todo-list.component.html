@@ -14,7 +14,7 @@
         </div> -->
 
         <li *ngFor="let todo of todos; index as i"
-            [class.completed] = "todo.complete">
+            [class.completed] = "todo.completed">
             
             <!-- <span (click)="toggleComplete(todos.indexOf(todo))">{{todo.name}}</span> -->
             <!-- <span class="btnDel" (click)="removeTodo(todos.indexOf(todo))">X</span> -->
@@ -22,7 +22,7 @@
             <!-- <span (click)="toggleComplete(i)">{{todo.name}}</span> -->
             <!-- <span class="btnDel" (click)="removeTodo(i)">X</span> -->
 
-            <app-todo-items [todo]="todo" [TodoParentName]="todo.name" [TodoIndex]="i"></app-todo-items>
+            <app-todo-items [todo]="todo" [TodoParentName]="todo.title" [TodoIndex]="todo.id"></app-todo-items>
 
         </li>
         

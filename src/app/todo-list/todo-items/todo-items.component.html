@@ -2,7 +2,7 @@
     <span (click)="toggleComplete(TodoIndex)">{{TodoParentName}}</span>
     <span class="btnEdit">
         <!-- <a routerLink="/todo/{{TodoIndex}}"><i class="fas fa-pencil-alt"></i></a>    -->
-        <a [routerLink]="['/todo/',todo.id]"
+        <a [routerLink]="['/todo/',TodoIndex]"
            routerLinkActive="activeLink">
         <i class="fas fa-pencil-alt"></i></a>   
     </span>
