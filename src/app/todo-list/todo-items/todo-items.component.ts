@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TodoServicesService } from 'src/app/todo-services.service';
+import { ITodo } from 'src/app/todo';
 
 @Component({
   selector: 'app-todo-items',
@@ -10,7 +11,7 @@ export class TodoItemsComponent {
 
   @Input() TodoParentName;
   @Input() TodoIndex;
-  @Input() todo;
+  @Input() todo: ITodo;
 
 
   // @Output() TodoDelEmit = new EventEmitter();

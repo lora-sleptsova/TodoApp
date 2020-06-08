@@ -13,8 +13,14 @@ export class AddTodoComponent {
 
   constructor(private _todoServe:TodoServicesService){}
 
-  addTodo(TodoText){
-    this._todoServe.addTodo(TodoText);
+  // addTodo(TodoText){
+  //   this._todoServe.addTodo(TodoText);
+  // }
+
+  addTodo(todo){
+    this._todoServe.addTodo(todo).subscribe(
+      resp => console.log(todo)
+    );
   }
 
 }
