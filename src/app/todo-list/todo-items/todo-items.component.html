@@ -1,12 +1,11 @@
 <div>
-    <span (click)="toggleComplete(TodoIndex)">{{todo.title}}</span>
+    <span (click)="toggleCompleteItem(todo)">{{todo.title}}</span>
     <span class="btnEdit">
-        <!-- <a routerLink="/todo/{{TodoIndex}}"><i class="fas fa-pencil-alt"></i></a>    -->
-        <a [routerLink]="['/todo/',TodoIndex]"
+        <a [routerLink]="['/todo/',todo.id]"
            routerLinkActive="activeLink">
         <i class="fas fa-pencil-alt"></i></a>   
     </span>
-    <span class="btnDel" (click)="removeTodo(TodoIndex)">
+    <span class="btnDel" (click)="removeTodoItem(todo)">
         <i class="fas fa-trash"></i>    
     </span>
 </div>

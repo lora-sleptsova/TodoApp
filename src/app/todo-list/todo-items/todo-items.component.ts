@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { TodoServicesService } from 'src/app/todo-services.service';
 import { ITodo } from 'src/app/todo';
 
@@ -9,23 +9,19 @@ import { ITodo } from 'src/app/todo';
 })
 export class TodoItemsComponent {
 
-  @Input() TodoParentName;
-  @Input() TodoIndex;
   @Input() todo: ITodo;
 
-
-  // @Output() TodoDelEmit = new EventEmitter();
+  @Output() TodoDelEmit = new EventEmitter();
+  @Output() TodoComplEmit = new EventEmitter();
   
-  index: number;
-
   constructor(private _todoServe:TodoServicesService){}
 
-  removeTodo(index){
-    this._todoServe.removeTodo(index);
+  removeTodoItem(todo:ITodo){
+    this.TodoDelEmit.emit(todo);
   }
 
-  toggleComplete(index){
-    this._todoServe.toggleComplete(index);
+  toggleCompleteItem(todo:ITodo){
+    this.TodoComplEmit.emit(todo);
   }
 
 }

@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { TodoServicesService } from '../todo-services.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ITodo } from '../todo';
 
 @Component({
@@ -8,19 +7,17 @@ import { ITodo } from '../todo';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent {
-   todos: ITodo[] = [];
-  // todos = <ITodo[]>[];
+  @Input("todosData") todos;
+  @Output() removeTodosEmit = new EventEmitter();
+  @Output() toggleTodosEmit = new EventEmitter();
 
-  constructor(private _TodoServices:TodoServicesService){
-    // this.todos = this._TodoServices.getTodos();
+
+  removeTodoList(index:number){
+    this.removeTodosEmit.emit(index);
   }
-
-  ngOnInit(){
-    this._TodoServices.fetchTodos().subscribe(
-      data=> {
-        this.todos = data;
-      }
-    );
+  
+  toggleTodoList(index:number){
+    this.toggleTodosEmit.emit(index);
   }
   
  }

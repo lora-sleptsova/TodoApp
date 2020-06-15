@@ -2,27 +2,15 @@
 
 <div *ngIf="todos.length; else noTodos">
 	<ul>
-        <!-- <li *ngFor="let todo of todos">
-            <div *ngIf="todo.complete">{{todo.name}}</div>
-        </li> -->
         
-        <!-- <li appCrossLine *ngFor="let todo of todos">{{todo.name}}</li> -->
-
-        <!-- <div class="addTodo">
-            <input #newTodo type="text" placeholder="add new" (keyup.enter)="addTodo(newTodo.value)">
-            <button (click)="addTodo(newTodo.value)">Add</button>
-        </div> -->
-
         <li *ngFor="let todo of todos; index as i"
             [class.completed] = "todo.completed">
             
-            <!-- <span (click)="toggleComplete(todos.indexOf(todo))">{{todo.name}}</span> -->
-            <!-- <span class="btnDel" (click)="removeTodo(todos.indexOf(todo))">X</span> -->
-
-            <!-- <span (click)="toggleComplete(i)">{{todo.name}}</span> -->
-            <!-- <span class="btnDel" (click)="removeTodo(i)">X</span> -->
-
-            <app-todo-items [todo]="todo" [TodoParentName]="todo.title" [TodoIndex]="todo.id"></app-todo-items>
+            <app-todo-items
+                [todo]="todo"
+                (TodoDelEmit)="this.removeTodoList($event)"
+                (TodoComplEmit)="this.toggleTodoList($event)"
+            ></app-todo-items>
 
         </li>
         
